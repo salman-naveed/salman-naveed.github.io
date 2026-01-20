@@ -1,0 +1,39 @@
+# Resume/CV
+
+Add your resume PDF here.
+
+## Filename
+
+`salman-naveed-resume.pdf` (or update the filename in `config.js`)
+
+## Tips
+
+- Keep file size under 2MB
+- Use a professional format
+- Include contact information
+- Keep it updated
+- Consider creating multiple versions:
+  - `resume-full.pdf` - Complete version
+  - `resume-short.pdf` - One-page version
+  - `cv-academic.pdf` - Academic CV
+
+## Format Recommendations
+
+- PDF format (best compatibility)
+- Professional template
+- Clear sections (Education, Experience, Skills, Projects)
+- Consistent formatting
+- Easy to read fonts
+
+## Update Reference
+
+If you change the filename, update `config.js`:
+
+```javascript
+features: {
+    resume: {
+        enabled: true,
+        file: "assets/resume/your-resume-name.pdf"
+    }
+}
+```

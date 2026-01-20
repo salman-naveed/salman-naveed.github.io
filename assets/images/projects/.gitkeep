@@ -1,0 +1,31 @@
+# Image Placeholders
+
+This directory contains project images. Replace these placeholders with your actual project photos.
+
+## Recommended Image Specs
+
+- **Dimensions**: 800x600px (4:3 ratio)
+- **Format**: JPG or PNG
+- **File Size**: < 500KB (compress with TinyPNG)
+- **Naming**: Use lowercase with hyphens (e.g., `smart-home-hub.jpg`)
+
+## Example Images Needed
+
+Based on projects in `projects.js`:
+
+- `smart-home-hub.jpg`
+- `pcb-card.jpg`
+- `robot-arm.jpg`
+- `weather-station.jpg`
+- `fpga-audio.jpg`
+- `wireless-charging.jpg`
+- `portfolio.jpg`
+- `oscilloscope.jpg`
+
+## Placeholder Image
+
+If you don't have an image yet, create a simple placeholder:
+- **Tool**: [placeholder.com](https://placeholder.com)
+- **Example**: `https://via.placeholder.com/800x600/1a1f3a/00ff9f?text=Project+Name`
+
+Or use a screenshot of your project, circuit diagram, or related image.

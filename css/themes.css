@@ -1,0 +1,313 @@
+/**
+ * THEME DEFINITIONS
+ * =================
+ * Multiple themes that users can switch between
+ * Easily add new themes by copying a theme block and changing the colors
+ */
+
+/* ==================== CYBERPUNK THEME (Default) ==================== */
+body[data-theme="cyberpunk"] {
+    /* Background Colors */
+    --bg-primary: #0a0e27;
+    --bg-secondary: #1a1f3a;
+    --bg-tertiary: #2a2f4a;
+    --bg-nav: rgba(10, 14, 39, 0.9);
+    --bg-footer: #0f1229;
+    --bg-terminal: #0f1229;
+    --bg-terminal-header: #1a1f3a;
+    --bg-tag: rgba(0, 255, 159, 0.1);
+    
+    /* Text Colors */
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --text-tertiary: #808080;
+    --text-tag: #00ff9f;
+    
+    /* Accent Colors */
+    --accent-primary: #00ff9f;
+    --accent-secondary: #00d9ff;
+    --accent-tertiary: #ff0080;
+    
+    /* Border Colors */
+    --border-color: rgba(0, 255, 159, 0.2);
+}
+
+/* ==================== SYNTHWAVE THEME ==================== */
+body[data-theme="synthwave"] {
+    /* Background Colors */
+    --bg-primary: #2b213a;
+    --bg-secondary: #3d2c52;
+    --bg-tertiary: #4f3768;
+    --bg-nav: rgba(43, 33, 58, 0.9);
+    --bg-footer: #1f1729;
+    --bg-terminal: #1f1729;
+    --bg-terminal-header: #2b213a;
+    --bg-tag: rgba(255, 0, 255, 0.1);
+    
+    /* Text Colors */
+    --text-primary: #f9f9f9;
+    --text-secondary: #c9c9c9;
+    --text-tertiary: #999999;
+    --text-tag: #ff00ff;
+    
+    /* Accent Colors */
+    --accent-primary: #ff00ff;
+    --accent-secondary: #00ffff;
+    --accent-tertiary: #ffff00;
+    
+    /* Border Colors */
+    --border-color: rgba(255, 0, 255, 0.3);
+}
+
+/* ==================== MATRIX THEME ==================== */
+body[data-theme="matrix"] {
+    /* Background Colors */
+    --bg-primary: #000000;
+    --bg-secondary: #0d0d0d;
+    --bg-tertiary: #1a1a1a;
+    --bg-nav: rgba(0, 0, 0, 0.95);
+    --bg-footer: #000000;
+    --bg-terminal: #000000;
+    --bg-terminal-header: #0d0d0d;
+    --bg-tag: rgba(0, 255, 0, 0.1);
+    
+    /* Text Colors */
+    --text-primary: #00ff00;
+    --text-secondary: #00cc00;
+    --text-tertiary: #009900;
+    --text-tag: #00ff00;
+    
+    /* Accent Colors */
+    --accent-primary: #00ff00;
+    --accent-secondary: #00ff41;
+    --accent-tertiary: #39ff14;
+    
+    /* Border Colors */
+    --border-color: rgba(0, 255, 0, 0.3);
+}
+
+/* Add matrix rain effect */
+body[data-theme="matrix"] .particle-canvas {
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 255, 0, 0.03) 2px,
+        rgba(0, 255, 0, 0.03) 4px
+    );
+}
+
+/* ==================== MINIMAL THEME ==================== */
+body[data-theme="minimal"] {
+    /* Background Colors */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f5f5f5;
+    --bg-tertiary: #e0e0e0;
+    --bg-nav: rgba(255, 255, 255, 0.95);
+    --bg-footer: #f8f8f8;
+    --bg-terminal: #2d2d2d;
+    --bg-terminal-header: #1e1e1e;
+    --bg-tag: rgba(0, 0, 0, 0.05);
+    
+    /* Text Colors */
+    --text-primary: #1a1a1a;
+    --text-secondary: #4a4a4a;
+    --text-tertiary: #8a8a8a;
+    --text-tag: #000000;
+    
+    /* Accent Colors */
+    --accent-primary: #0066cc;
+    --accent-secondary: #0099ff;
+    --accent-tertiary: #6633ff;
+    
+    /* Border Colors */
+    --border-color: #e0e0e0;
+}
+
+/* Terminal in minimal theme keeps dark background */
+body[data-theme="minimal"] .terminal-body {
+    color: #00ff00;
+}
+
+body[data-theme="minimal"] .terminal-line {
+    color: #00ff00;
+}
+
+body[data-theme="minimal"] .prompt {
+    color: #00ff9f;
+}
+
+body[data-theme="minimal"] .command {
+    color: #00d9ff;
+}
+
+body[data-theme="minimal"] .terminal-output {
+    color: #a0a0a0;
+}
+
+/* ==================== DRACULA THEME ==================== */
+body[data-theme="dracula"] {
+    /* Background Colors */
+    --bg-primary: #282a36;
+    --bg-secondary: #3d3f4e;
+    --bg-tertiary: #44475a;
+    --bg-nav: rgba(40, 42, 54, 0.95);
+    --bg-footer: #21222c;
+    --bg-terminal: #21222c;
+    --bg-terminal-header: #282a36;
+    --bg-tag: rgba(189, 147, 249, 0.1);
+    
+    /* Text Colors */
+    --text-primary: #f8f8f2;
+    --text-secondary: #bfbfbf;
+    --text-tertiary: #6272a4;
+    --text-tag: #bd93f9;
+    
+    /* Accent Colors */
+    --accent-primary: #bd93f9;
+    --accent-secondary: #ff79c6;
+    --accent-tertiary: #50fa7b;
+    
+    /* Border Colors */
+    --border-color: rgba(98, 114, 164, 0.3);
+}
+
+/* ==================== THEME-SPECIFIC EFFECTS ==================== */
+
+/* Cyberpunk glow effects */
+body[data-theme="cyberpunk"]:not(.effects-disabled) .btn-primary:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 159, 0.5);
+}
+
+body[data-theme="cyberpunk"]:not(.effects-disabled) .project-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 255, 159, 0.2);
+}
+
+/* Synthwave glow effects */
+body[data-theme="synthwave"]:not(.effects-disabled) .btn-primary:hover {
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+}
+
+body[data-theme="synthwave"]:not(.effects-disabled) .project-card:hover {
+    box-shadow: 0 10px 30px rgba(255, 0, 255, 0.2);
+}
+
+body[data-theme="synthwave"]:not(.effects-disabled) .hero-title {
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+}
+
+/* Matrix glow effects */
+body[data-theme="matrix"]:not(.effects-disabled) .btn-primary:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+}
+
+body[data-theme="matrix"]:not(.effects-disabled) .project-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 255, 0, 0.2);
+}
+
+body[data-theme="matrix"]:not(.effects-disabled) .hero-title {
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+/* Minimal theme - clean shadows */
+body[data-theme="minimal"] .project-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+body[data-theme="minimal"] .btn-primary:hover {
+    box-shadow: 0 5px 15px rgba(0, 102, 204, 0.3);
+}
+
+/* Dracula glow effects */
+body[data-theme="dracula"]:not(.effects-disabled) .btn-primary:hover {
+    box-shadow: 0 0 20px rgba(189, 147, 249, 0.5);
+}
+
+body[data-theme="dracula"]:not(.effects-disabled) .project-card:hover {
+    box-shadow: 0 10px 30px rgba(189, 147, 249, 0.2);
+}
+
+/* ==================== CUSTOM THEME TEMPLATE ==================== */
+/*
+To add a new theme, copy this template and change the colors:
+
+body[data-theme="your-theme-name"] {
+    --bg-primary: #000000;
+    --bg-secondary: #111111;
+    --bg-tertiary: #222222;
+    --bg-nav: rgba(0, 0, 0, 0.9);
+    --bg-footer: #000000;
+    --bg-terminal: #000000;
+    --bg-terminal-header: #111111;
+    --bg-tag: rgba(255, 255, 255, 0.1);
+    
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --text-tertiary: #999999;
+    --text-tag: #ffffff;
+    
+    --accent-primary: #ff0000;
+    --accent-secondary: #00ff00;
+    --accent-tertiary: #0000ff;
+    
+    --border-color: rgba(255, 255, 255, 0.2);
+}
+
+Then add your theme name to CONFIG.theme.availableThemes in config.js
+*/
+
+/* ==================== SECRET MODE (Easter Egg) ==================== */
+body.secret-mode {
+    animation: rainbowBackground 5s infinite;
+}
+
+@keyframes rainbowBackground {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+body.secret-mode .hero-title {
+    animation: rainbow 2s infinite;
+}
+
+@keyframes rainbow {
+    0% { color: #ff0000; }
+    14% { color: #ff7f00; }
+    28% { color: #ffff00; }
+    42% { color: #00ff00; }
+    57% { color: #0000ff; }
+    71% { color: #4b0082; }
+    85% { color: #9400d3; }
+    100% { color: #ff0000; }
+}
+
+/* ==================== HIGH CONTRAST MODE ==================== */
+body.high-contrast {
+    --bg-primary: #000000;
+    --bg-secondary: #1a1a1a;
+    --text-primary: #ffffff;
+    --text-secondary: #ffffff;
+    --accent-primary: #ffff00;
+    --border-color: #ffffff;
+}
+
+/* ==================== PRINT STYLES ==================== */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .navbar,
+    .particle-canvas,
+    .back-to-top,
+    .theme-toggle,
+    .effects-toggle,
+    .mobile-menu-toggle {
+        display: none !important;
+    }
+    
+    .section {
+        page-break-inside: avoid;
+    }
+}
