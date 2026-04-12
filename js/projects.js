@@ -18,6 +18,34 @@
 
 const PROJECTS = [
     {
+        id: "rover-xr4",
+        title: "XR-4 Rover Control System",
+        description: "Four-wheel remote-controlled rover with dual ESP32 microcontrollers communicating via ESP-NOW for sub-millisecond response time.",
+        longDescription: `
+            A four-wheel remote-controlled rover powered by two ESP32 microcontrollers that communicate wirelessly. 
+            One microcontroller sits in the rover (the On-Board Computer), the other in a handheld controller 
+            (the Control & Telemetry Unit). They communicate using ESP-NOW with 1-5ms latency for real-time control.
+            
+            The system features hardware motor control via MCPWM peripheral, sensor fusion with IMU and magnetometer, 
+            dual-core processing for zero-latency sensor reading, and hardware interrupt safety systems with <100µs 
+            emergency stop response. Built with a formal state machine architecture and designed for future autonomous 
+            navigation expansion.
+        `,
+        category: "robotics",
+        tags: ["ESP32", "ESP-NOW", "Motor Control", "Sensor Fusion", "FreeRTOS", "Differential Drive"],
+        image: "assets/images/projects/rover-xr4.jpg",
+        github: "https://github.com/salman-naveed/rover-xr4",
+        demo: null,
+        featured: true,
+        date: "2026-04-12",
+        gallery: [
+            "assets/images/projects/rover-xr4-1.jpg",
+            "assets/images/projects/rover-xr4-2.jpg",
+            "assets/images/projects/rover-xr4-3.jpg",
+            "assets/images/projects/rover-xr4-4.jpg"
+        ]
+    },
+    {
         id: "smart-home-hub",
         title: "Smart Home Hub",
         description: "Custom IoT hub using ESP32 to control all smart devices in my home with a beautiful web interface.",
