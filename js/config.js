@@ -10,7 +10,7 @@ const CONFIG = {
     personal: {
         name: "Salman Naveed",
         title: "Electrical Engineer • DIY Maker • Tech Polymath",
-        email: "your.email@example.com",
+        email: "salmannaveed511@gmail.com",
         location: "Your Location",
         tagline: "Building innovative solutions at the intersection of hardware and software",
         bio: [
