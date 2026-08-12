@@ -11,7 +11,7 @@ const CONFIG = {
         name: "Salman Naveed",
         title: "Electrical Engineer • DIY Maker • Tech Polymath",
         email: "salmannaveed511@gmail.com",
-        location: "Your Location",
+        location: "Stuttgart, Germany",
         tagline: "Building innovative solutions at the intersection of hardware and software",
         bio: [
             "Hello! I'm Salman, an electrical engineer with a passion for creating innovative solutions at the intersection of hardware and software.",
@@ -23,12 +23,12 @@ const CONFIG = {
     // ==================== SOCIAL LINKS ====================
     social: {
         github: "https://github.com/salman-naveed",
-        linkedin: "https://linkedin.com/in/yourprofile",
-        twitter: "https://twitter.com/yourhandle",
-        youtube: "https://youtube.com/@yourchannel",
-        instagram: "https://instagram.com/yourhandle",
-        hackaday: "https://hackaday.io/yourprofile",
-        email: "mailto:your.email@example.com"
+        linkedin: "https://linkedin.com/in/salmannaveed",
+        // twitter: "https://twitter.com/salman_naveed",
+        // youtube: "https://youtube.com/@salman_naveed",
+        // instagram: "https://instagram.com/salman_naveed",
+        // hackaday: "https://hackaday.io/salman_naveed",
+        email: "mailto:salmannaveed511@gmail.com"
     },
 
     // ==================== NAVIGATION ====================
