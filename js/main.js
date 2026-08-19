@@ -346,7 +346,12 @@ function initializeContactForm() {
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        const formData = new FormData(form);
+        // Collect form data
+        const name = form.querySelector('#name').value;
+        const email = form.querySelector('#email').value;
+        const subject = form.querySelector('#subject').value;
+        const message = form.querySelector('#message').value;
+
         const submitButton = form.querySelector('button[type="submit"]');
         const originalText = submitButton.innerHTML;
         
@@ -355,33 +360,51 @@ function initializeContactForm() {
 
         try {
             if (CONFIG.contact.backend === 'formspree' || CONFIG.contact.backend === 'getform') {
-                const response = await fetch(CONFIG.contact.endpoint, {
+                // Create FormData object
+                const formData = new FormData();
+                formData.append('name', name);
+                formData.append('email', email);
+                formData.append('subject', subject);
+                formData.append('message', message);
+
+                const endpoint = CONFIG.contact.endpoint;
+                console.log('📤 Submitting form to:', endpoint);
+
+                const response = await fetch(endpoint, {
                     method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
+                    body: formData
                 });
 
-                if (response.ok) {
-                    showNotification(CONFIG.contact.messages.success, 'success');
+                console.log('📬 Response status:', response.status);
+
+                if (response.ok || response.status === 200 || response.status === 201) {
+                    showNotification('✅ Message sent successfully! Thank you for reaching out.', 'success');
                     form.reset();
+                    console.log('✅ Form submitted successfully');
                 } else {
-                    throw new Error('Form submission failed');
+                    console.error('❌ Submission failed with status:', response.status);
+                    const text = await response.text();
+                    console.error('Response:', text);
+                    throw new Error(`HTTP ${response.status}`);
                 }
-            } else {
+            } else if (CONFIG.contact.backend === 'mailto') {
                 // Fallback to mailto
-                window.location.href = `mailto:${CONFIG.contact.fallbackEmail}?subject=${formData.get('subject')}&body=${formData.get('message')}`;
+                const mailtoLink = `mailto:${CONFIG.contact.fallbackEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+                window.location.href = mailtoLink;
                 showNotification('Opening your email client...', 'info');
+            } else {
+                throw new Error('Unknown contact backend: ' + CONFIG.contact.backend);
             }
         } catch (error) {
-            showNotification(CONFIG.contact.messages.error, 'error');
-            console.error('Form submission error:', error);
+            console.error('❌ Form submission error:', error);
+            showNotification('❌ ' + (CONFIG.contact.messages.error || 'Failed to send message. Please try again.'), 'error');
         } finally {
             submitButton.innerHTML = originalText;
             submitButton.disabled = false;
         }
     });
+
+    console.log('📋 Contact form initialized');
 }
 
 // ==================== SCROLL EFFECTS ====================

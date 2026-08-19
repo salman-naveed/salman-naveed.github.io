@@ -6,6 +6,14 @@
  */
 
 function injectConfigValues() {
+    console.log('🔧 Starting config injection...');
+    
+    if (typeof CONFIG === 'undefined') {
+        console.warn('⚠️ CONFIG not loaded yet, retrying in 100ms');
+        setTimeout(injectConfigValues, 100);
+        return;
+    }
+    
     // Inject personal info
     if (CONFIG.personal) {
         document.querySelectorAll('[data-config="name"]').forEach(el => {
@@ -43,21 +51,45 @@ function injectConfigValues() {
                 const url = CONFIG.social[platform];
                 if (el.tagName === 'A') {
                     el.href = url;
+                    // Update text content if it's email
+                    if (platform === 'email' && url.startsWith('mailto:')) {
+                        const email = url.replace('mailto:', '');
+                        el.textContent = email;
+                    }
                 }
                 el.setAttribute('data-platform', platform);
             });
         });
     }
     
+    // Also update contact methods section
+    const contactEmail = document.querySelector('[data-contact="email"]');
+    if (contactEmail && CONFIG.personal.email) {
+        contactEmail.href = 'mailto:' + CONFIG.personal.email;
+        const emailSpan = contactEmail.querySelector('span');
+        if (emailSpan) emailSpan.textContent = CONFIG.personal.email;
+    }
+    
+    const contactGithub = document.querySelector('[data-contact="github"]');
+    if (contactGithub && CONFIG.social.github) {
+        contactGithub.href = CONFIG.social.github;
+    }
+    
+    const contactLinkedin = document.querySelector('[data-contact="linkedin"]');
+    if (contactLinkedin && CONFIG.social.linkedin) {
+        contactLinkedin.href = CONFIG.social.linkedin;
+    }
+    
     console.log('✅ Config values injected successfully');
 }
 
-// Run when DOM is ready
-document.addEventListener('DOMContentLoaded', injectConfigValues);
-
-// Also run immediately in case config loads before this script
+// Run after DOM is fully loaded
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', injectConfigValues);
+    document.addEventListener('DOMContentLoaded', () => {
+        // Use setTimeout to ensure all DOM elements are ready
+        setTimeout(injectConfigValues, 50);
+    });
 } else {
-    injectConfigValues();
+    // DOM already loaded
+    setTimeout(injectConfigValues, 50);
 }

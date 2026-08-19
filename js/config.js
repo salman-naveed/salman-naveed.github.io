@@ -219,7 +219,7 @@ const CONFIG = {
         description: "Portfolio of Salman Naveed - Electrical Engineer, Designer and Maker. Showcasing projects in electronics, robotics, and software development.",
         keywords: "electrical engineer, DIY maker, designer, electronics, robotics, IoT, embedded systems, portfolio, pakistan, germany, salman naveed",
         author: "Salman Naveed",
-        image: "assets/images/og-image.jpg", // Open Graph image
+        image: "assets/images/rover-xr4-4.png", // Open Graph image
         twitterHandle: "@yourhandle"
     },
 

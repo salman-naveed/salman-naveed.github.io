@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Test Page - Verification</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Courier New', monospace;
+            background: #0a0e27;
+            color: #e0e0e0;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: #00ff9f;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+        
+        .test-section {
+            background: #1a1f3a;
+            border: 2px solid #00ff9f;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .test-title {
+            color: #00ff9f;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+        
+        .test-item {
+            background: #0a0e27;
+            border-left: 3px solid #00ff9f;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+        }
+        
+        .test-item.pass {
+            border-left-color: #00ff9f;
+            background: rgba(0, 255, 159, 0.05);
+        }
+        
+        .test-item.fail {
+            border-left-color: #ff0080;
+            background: rgba(255, 0, 128, 0.05);
+        }
+        
+        .test-item.warning {
+            border-left-color: #ffff00;
+            background: rgba(255, 255, 0, 0.05);
+        }
+        
+        .test-label {
+            color: #b0b0b0;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .test-value {
+            color: #00d9ff;
+            font-size: 0.9rem;
+            word-break: break-all;
+            background: #0f1229;
+            padding: 0.5rem;
+            border-radius: 4px;
+            margin-top: 0.5rem;
+        }
+        
+        .status-icon {
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .status-icon.pass::before {
+            content: "✅ ";
+            color: #00ff9f;
+        }
+        
+        .status-icon.fail::before {
+            content: "❌ ";
+            color: #ff0080;
+        }
+        
+        .status-icon.warning::before {
+            content: "⚠️ ";
+            color: #ffff00;
+        }
+        
+        button {
+            background: #00ff9f;
+            color: #0a0e27;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            margin: 0.5rem 0.5rem 0.5rem 0;
+        }
+        
+        button:hover {
+            background: #00d9ff;
+        }
+        
+        button:disabled {
+            background: #666;
+            cursor: not-allowed;
+        }
+        
+        .button-group {
+            margin-top: 1rem;
+        }
+        
+        .summary {
+            background: #1a1f3a;
+            border: 2px solid #00d9ff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .summary h2 {
+            color: #00d9ff;
+            margin-bottom: 1rem;
+        }
+        
+        .summary-text {
+            font-size: 1.1rem;
+            color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Website Verification Test</h1>
+        
+        <div class="test-section">
+            <div class="test-title">Configuration Tests</div>
+            
+            <div class="test-item" id="test-config">
+                <div class="status-icon pass"></div>
+                <div class="test-label">CONFIG Object Loaded</div>
+                <div class="test-value" id="config-status">Checking...</div>
+            </div>
+            
+            <div class="test-item" id="test-personal">
+                <div class="status-icon pass"></div>
+                <div class="test-label">Personal Email</div>
+                <div class="test-value" id="personal-email">Checking...</div>
+            </div>
+            
+            <div class="test-item" id="test-github">
+                <div class="status-icon pass"></div>
+                <div class="test-label">GitHub URL</div>
+                <div class="test-value" id="github-url">Checking...</div>
+            </div>
+            
+            <div class="test-item" id="test-linkedin">
+                <div class="status-icon pass"></div>
+                <div class="test-label">LinkedIn URL</div>
+                <div class="test-value" id="linkedin-url">Checking...</div>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <div class="test-title">DOM Injection Tests</div>
+            
+            <div class="test-item" id="test-footer-email">
+                <div class="status-icon pass"></div>
+                <div class="test-label">Footer Email Link Updated</div>
+                <div class="test-value" id="footer-email-value">Checking...</div>
+            </div>
+            
+            <div class="test-item" id="test-footer-github">
+                <div class="status-icon pass"></div>
+                <div class="test-label">Footer GitHub Link Updated</div>
+                <div class="test-value" id="footer-github-value">Checking...</div>
+            </div>
+            
+            <div class="test-item" id="test-contact-form">
+                <div class="status-icon pass"></div>
+                <div class="test-label">Contact Form Exists</div>
+                <div class="test-value" id="contact-form-value">Checking...</div>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <div class="test-title">Contact Configuration</div>
+            
+            <div class="test-item" id="test-formspree">
+                <div class="status-icon pass"></div>
+                <div class="test-label">Formspree Endpoint</div>
+                <div class="test-value" id="formspree-value">Checking...</div>
+            </div>
+            
+            <div class="test-item" id="test-endpoint-valid">
+                <div class="status-icon pass"></div>
+                <div class="test-label">Endpoint Format Valid</div>
+                <div class="test-value" id="endpoint-valid-value">Checking...</div>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <div class="test-title">Quick Actions</div>
+            <div class="button-group">
+                <button onclick="runAllTests()">🔄 Run All Tests</button>
+                <button onclick="testFormSubmission()">📤 Test Form Submission</button>
+                <button onclick="copyDebugInfo()">📋 Copy Debug Info</button>
+            </div>
+        </div>
+        
+        <div class="summary" id="summary" style="display:none;">
+            <h2>📊 Test Summary</h2>
+            <div class="summary-text" id="summary-text"></div>
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/config-injector.js"></script>
+    <script>
+        // Wait a bit for injector to run
+        setTimeout(() => {
+            runAllTests();
+        }, 500);
+
+        function runAllTests() {
+            console.log('🧪 Running tests...');
+            
+            let passCount = 0;
+            let failCount = 0;
+            
+            // Test 1: CONFIG loaded
+            if (typeof CONFIG !== 'undefined' && CONFIG.personal) {
+                updateTest('test-config', 'pass', 'CONFIG object loaded successfully');
+                passCount++;
+            } else {
+                updateTest('test-config', 'fail', 'CONFIG not loaded - check js/config.js');
+                failCount++;
+                return; // Can't continue without CONFIG
+            }
+            
+            // Test 2: Personal email
+            if (CONFIG.personal && CONFIG.personal.email) {
+                updateTest('test-personal', 'pass', CONFIG.personal.email);
+                document.getElementById('personal-email').textContent = CONFIG.personal.email;
+                passCount++;
+            } else {
+                updateTest('test-personal', 'fail', 'No email in CONFIG.personal');
+                failCount++;
+            }
+            
+            // Test 3: GitHub URL
+            if (CONFIG.social && CONFIG.social.github) {
+                updateTest('test-github', 'pass', CONFIG.social.github);
+                document.getElementById('github-url').textContent = CONFIG.social.github;
+                passCount++;
+            } else {
+                updateTest('test-github', 'fail', 'No GitHub in CONFIG.social');
+                failCount++;
+            }
+            
+            // Test 4: LinkedIn URL
+            if (CONFIG.social && CONFIG.social.linkedin) {
+                updateTest('test-linkedin', 'pass', CONFIG.social.linkedin);
+                document.getElementById('linkedin-url').textContent = CONFIG.social.linkedin;
+                passCount++;
+            } else {
+                updateTest('test-linkedin', 'fail', 'No LinkedIn in CONFIG.social');
+                failCount++;
+            }
+            
+            // Test 5: Footer email link
+            const footerEmail = document.querySelector('[data-social="email"]');
+            if (footerEmail && footerEmail.href && footerEmail.href.includes('mailto:')) {
+                const email = footerEmail.href.replace('mailto:', '');
+                updateTest('test-footer-email', 'pass', footerEmail.href);
+                document.getElementById('footer-email-value').textContent = footerEmail.href;
+                passCount++;
+            } else {
+                updateTest('test-footer-email', 'fail', 'Footer email link not updated');
+                failCount++;
+            }
+            
+            // Test 6: Footer GitHub link
+            const footerGithub = document.querySelector('[data-social="github"]');
+            if (footerGithub && footerGithub.href && footerGithub.href.includes('github')) {
+                updateTest('test-footer-github', 'pass', footerGithub.href);
+                document.getElementById('footer-github-value').textContent = footerGithub.href;
+                passCount++;
+            } else {
+                updateTest('test-footer-github', 'fail', 'Footer GitHub link not updated');
+                failCount++;
+            }
+            
+            // Test 7: Contact form
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                updateTest('test-contact-form', 'pass', 'Contact form element found');
+                passCount++;
+            } else {
+                updateTest('test-contact-form', 'warning', 'Contact form not found on this page');
+            }
+            
+            // Test 8: Formspree endpoint
+            if (CONFIG.contact && CONFIG.contact.endpoint) {
+                updateTest('test-formspree', 'pass', CONFIG.contact.endpoint);
+                document.getElementById('formspree-value').textContent = CONFIG.contact.endpoint;
+                passCount++;
+            } else {
+                updateTest('test-formspree', 'fail', 'No Formspree endpoint configured');
+                failCount++;
+            }
+            
+            // Test 9: Endpoint format
+            if (CONFIG.contact && CONFIG.contact.endpoint && CONFIG.contact.endpoint.includes('formspree.io/f/')) {
+                updateTest('test-endpoint-valid', 'pass', 'Endpoint format is valid (formspree.io/f/xxx)');
+                passCount++;
+            } else {
+                updateTest('test-endpoint-valid', 'fail', 'Endpoint format invalid - should be https://formspree.io/f/YOUR_ID');
+                failCount++;
+            }
+            
+            // Show summary
+            showSummary(passCount, failCount);
+            
+            console.log(`✅ Tests completed: ${passCount} pass, ${failCount} fail`);
+        }
+
+        function updateTest(testId, status, value) {
+            const element = document.getElementById(testId);
+            const valueElement = element.querySelector('.test-value');
+            
+            element.classList.remove('pass', 'fail', 'warning');
+            element.classList.add(status);
+            
+            if (valueElement) {
+                valueElement.textContent = value;
+            }
+        }
+
+        function showSummary(passCount, failCount) {
+            const summary = document.getElementById('summary');
+            const summaryText = document.getElementById('summary-text');
+            
+            summary.style.display = 'block';
+            
+            if (failCount === 0) {
+                summaryText.innerHTML = `
+                    <p>✅ <strong>All tests passed!</strong></p>
+                    <p>Your website configuration is working correctly.</p>
+                    <p>Email, GitHub, LinkedIn links are all updated.</p>
+                    <p>You can now test the contact form if you're on the homepage.</p>
+                `;
+            } else {
+                summaryText.innerHTML = `
+                    <p>❌ <strong>${failCount} test(s) failed</strong></p>
+                    <p>Please check the failed tests above and fix any configuration issues.</p>
+                    <p>Most common issue: config.js not saved or not committed to Git.</p>
+                `;
+            }
+        }
+
+        function testFormSubmission() {
+            alert('To test the contact form, please go to the homepage (index.html) and submit a test message there.');
+        }
+
+        function copyDebugInfo() {
+            const info = `
+CONFIG Loaded: ${typeof CONFIG !== 'undefined'}
+Email: ${CONFIG?.personal?.email || 'Not set'}
+GitHub: ${CONFIG?.social?.github || 'Not set'}
+LinkedIn: ${CONFIG?.social?.linkedin || 'Not set'}
+Formspree Endpoint: ${CONFIG?.contact?.endpoint || 'Not set'}
+Browser: ${navigator.userAgent}
+URL: ${window.location.href}
+            `;
+            
+            navigator.clipboard.writeText(info).then(() => {
+                alert('Debug info copied to clipboard!');
+            });
+        }
+
+        // Also log to console
+        console.log('%c🧪 Website Test Page Loaded', 'font-size: 20px; color: #00ff9f; font-weight: bold');
+        console.log('Press F12 → Console to see debug information');
+    </script>
+</body>
+</html>
