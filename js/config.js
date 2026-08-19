@@ -9,13 +9,13 @@ const CONFIG = {
     // ==================== PERSONAL INFO ====================
     personal: {
         name: "Salman Naveed",
-        title: "Electrical Engineer • DIY Maker • Tech Polymath",
+        title: "Electrical Engineer • Designer • Maker",
         email: "salmannaveed511@gmail.com",
         location: "Stuttgart, Germany",
-        tagline: "Building innovative solutions at the intersection of hardware and software",
+        tagline: "Building innovative projects at the intersection of hardware and software",
         bio: [
-            "Hello! I'm Salman, an electrical engineer with a passion for creating innovative solutions at the intersection of hardware and software.",
-            "As a DIY maker and tech enthusiast, I love diving deep into various domains – whether it's building robots, experimenting with IoT devices, or exploring new programming paradigms.",
+            "I'm Salman, an electrical engineer with a passion for creating innovative projects at the intersection of hardware and software.",
+            "As a maker and tech enthusiast, I love diving deep into various domains – whether it's building robots, experimenting with IoT devices, or exploring new programming paradigms.",
             "When I'm not soldering circuits or writing code, you can find me tinkering with new technologies, reading about the latest innovations, or working on my next maker project."
         ]
     },
@@ -63,7 +63,7 @@ const CONFIG = {
     effects: {
         // Particle background
         particles: {
-            enabled: true,
+            enabled: false,
             count: 100,
             speed: 0.5,
             color: '#00ff9f',
@@ -74,7 +74,7 @@ const CONFIG = {
         typingAnimation: {
             enabled: true,
             speed: 50, // milliseconds per character
-            text: "Electrical Engineer | DIY Maker | Tech Polymath\nBuilding the future, one project at a time."
+            text: "Electrical Engineer | Designer | Maker\nBuilding the future, one project at a time."
         },
         
         // Glitch effect on title
@@ -112,7 +112,6 @@ const CONFIG = {
                 items: [
                     { name: "Python", level: 90, icon: "fab fa-python" },
                     { name: "C/C++", level: 85, icon: "fas fa-code" },
-                    { name: "JavaScript", level: 80, icon: "fab fa-js" },
                     { name: "MATLAB", level: 75, icon: "fas fa-chart-line" },
                     { name: "Verilog/VHDL", level: 70, icon: "fas fa-microchip" }
                 ]
@@ -121,7 +120,7 @@ const CONFIG = {
                 name: "Hardware & Electronics",
                 icon: "fas fa-microchip",
                 items: [
-                    { name: "PCB Design (KiCAD/Eagle)", level: 90 },
+                    { name: "PCB Design (KiCAD/Altium Designer)", level: 90 },
                     { name: "Arduino/ESP32", level: 95 },
                     { name: "Raspberry Pi", level: 85 },
                     { name: "FPGA Development", level: 70 },
@@ -171,7 +170,7 @@ const CONFIG = {
     projects: {
         showFeaturedOnly: false,
         itemsPerPage: 6,
-        categories: ["all", "electrical", "diy", "software", "robotics", "iot"],
+        //categories: ["all", "electrical", "diy", "software", "robotics", "iot"],
         sortBy: "date", // 'date', 'name', 'category'
         sortOrder: "desc" // 'asc', 'desc'
     },
@@ -194,10 +193,10 @@ const CONFIG = {
         backend: 'formspree',
         
         // Your form endpoint (for formspree/getform)
-        endpoint: 'https://formspree.io/f/YOUR_FORM_ID',
+        endpoint: 'https://formspree.io/f/xwleandj',
         
         // Email for mailto fallback
-        fallbackEmail: 'your.email@example.com',
+        fallbackEmail: 'salman.navid@hotmail.com',
         
         // Form fields
         fields: {
@@ -216,9 +215,9 @@ const CONFIG = {
 
     // ==================== SEO & META ====================
     seo: {
-        title: "Salman Naveed | Electrical Engineer & DIY Maker",
-        description: "Portfolio of Salman Naveed - Electrical Engineer, DIY Maker, and Tech Polymath. Showcasing projects in electronics, robotics, and software development.",
-        keywords: "electrical engineer, DIY maker, electronics, robotics, IoT, embedded systems, portfolio",
+        title: "Salman Naveed | Electrical Engineer, Designer & Maker",
+        description: "Portfolio of Salman Naveed - Electrical Engineer, Designer and Maker. Showcasing projects in electronics, robotics, and software development.",
+        keywords: "electrical engineer, DIY maker, designer, electronics, robotics, IoT, embedded systems, portfolio, pakistan, germany, salman naveed",
         author: "Salman Naveed",
         image: "assets/images/og-image.jpg", // Open Graph image
         twitterHandle: "@yourhandle"
