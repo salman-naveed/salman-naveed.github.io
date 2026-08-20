@@ -1,0 +1,26 @@
+---
+layout: ../../layouts/WritingLayout.astro
+title: "Article title"
+description: "Short article description."
+date: "2026-08-20"
+tags:
+  - Electronics
+hero: "/images/article/hero.jpg"
+featured: false
+order: 10
+draft: false
+---
+
+Opening paragraph.
+
+## First section
+
+Write normally in Markdown.
+
+## Second section
+
+Images are easy:
+
+```text
+![Description](/images/article/example.jpg)
+```

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 760">
+  <rect width="1400" height="760" fill="#ffffff"/>
+  <rect x="70" y="270" width="260" height="150" fill="#f4f4f1" stroke="#666"/>
+  <rect x="570" y="270" width="260" height="150" fill="#f4f4f1" stroke="#666"/>
+  <rect x="1070" y="270" width="260" height="150" fill="#f4f4f1" stroke="#666"/>
+  <line x1="330" y1="345" x2="570" y2="345" stroke="#666" stroke-width="3"/>
+  <line x1="830" y1="345" x2="1070" y2="345" stroke="#666" stroke-width="3"/>
+  <text x="200" y="355" text-anchor="middle" font-family="Arial" font-size="28" fill="#333">Sensors</text>
+  <text x="700" y="355" text-anchor="middle" font-family="Arial" font-size="28" fill="#333">Controller</text>
+  <text x="1200" y="355" text-anchor="middle" font-family="Arial" font-size="28" fill="#333">Outputs</text>
+</svg>

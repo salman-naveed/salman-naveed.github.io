@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  <rect width="1600" height="1000" fill="#e7e7e2"/>
+  <rect x="70" y="70" width="1460" height="860" fill="none" stroke="#b9b9b2" stroke-width="3"/>
+  <text x="800" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="46" fill="#686863">PROJECT IMAGE</text>
+  <text x="800" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#888880">Replace in /public/images/</text>
+</svg>

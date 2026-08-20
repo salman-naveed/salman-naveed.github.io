@@ -1,0 +1,33 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  description?: string;
+  year?: string | number;
+  hero?: string;
+  tags?: string[];
+}
+
+const {
+  href,
+  title,
+  description,
+  year,
+  hero = "/images/project-placeholder.svg",
+  tags = []
+} = Astro.props;
+---
+
+<article class="project-card">
+  <a href={href} aria-label={`Read ${title}`}>
+    <img src={hero} alt="" loading="lazy" />
+  </a>
+
+  <div class="project-card__meta">
+    {year && <span>{year}</span>}
+    {tags.slice(0, 3).map((tag) => <span>{tag}</span>)}
+  </div>
+
+  <h3><a href={href}>{title}</a></h3>
+  {description && <p>{description}</p>}
+</article>

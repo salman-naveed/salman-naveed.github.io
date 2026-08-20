@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+import { site } from "../../config/site";
+
+const modules = import.meta.glob("./*.md", { eager: true });
+
+const projects = Object.entries(modules)
+  .map(([path, mod]: any) => ({
+    href: `/projects/${path.replace("./", "").replace(".md", "")}/`,
+    ...mod.frontmatter
+  }))
+  .filter((project: any) => project.draft !== true)
+  .sort((a: any, b: any) => {
+    if ((a.order ?? 999) !== (b.order ?? 999)) {
+      return (a.order ?? 999) - (b.order ?? 999);
+    }
+    return String(b.year ?? "").localeCompare(String(a.year ?? ""));
+  });
+---
+
+<BaseLayout
+  title="Projects"
+  description="Engineering projects, case studies and build documentation."
+>
+  <section class="page-head">
+    <div class="container">
+      <div class="eyebrow">{site.pages.projects.eyebrow}</div>
+      <h1>{site.pages.projects.heading}</h1>
+      <p class="lead">{site.pages.projects.intro}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container card-grid">
+      {projects.map((project: any) => (
+        <ProjectCard
+          href={project.href}
+          title={project.title}
+          description={project.description}
+          year={project.year}
+          hero={project.hero}
+          tags={project.tags}
+        />
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-head {
+    padding: 86px 0 72px;
+  }
+
+  .page-head h1 {
+    font-size: clamp(2.7rem, 7vw, 5rem);
+    margin-bottom: 25px;
+  }
+</style>

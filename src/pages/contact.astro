@@ -1,0 +1,76 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { site } from "../config/site";
+
+const links = [
+  { label: "Email", value: site.contact.email, href: `mailto:${site.contact.email}` },
+  { label: "GitHub", value: "GitHub profile", href: site.contact.github },
+  { label: "LinkedIn", value: "LinkedIn profile", href: site.contact.linkedin },
+  { label: "Résumé", value: "Download / view", href: site.contact.resume }
+].filter((item) => item.href);
+---
+
+<BaseLayout title={`Contact — ${site.name}`} description={`Contact ${site.name}.`}>
+  <section class="page">
+    <div class="container">
+      <div class="eyebrow">{site.pages.contact.eyebrow}</div>
+      <h1>{site.pages.contact.heading}</h1>
+      <p class="lead">{site.pages.contact.intro}</p>
+
+      <div class="contact-list">
+        {links.map((item) => (
+          <a href={item.href}>
+            <span>{item.label}</span>
+            <strong>{item.value}</strong>
+          </a>
+        ))}
+
+        {site.contact.location && (
+          <div>
+            <span>Location</span>
+            <strong>{site.contact.location}</strong>
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page {
+    padding: 86px 0 110px;
+  }
+
+  .page h1 {
+    font-size: clamp(2.7rem, 7vw, 5rem);
+    margin-bottom: 26px;
+  }
+
+  .contact-list {
+    max-width: 760px;
+    margin-top: 52px;
+    border-top: 1px solid var(--border);
+  }
+
+  .contact-list a,
+  .contact-list div {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 20px;
+    padding: 17px 0;
+    border-bottom: 1px solid var(--border);
+    text-decoration: none;
+  }
+
+  .contact-list span {
+    color: var(--muted);
+  }
+
+  @media (max-width: 520px) {
+    .contact-list a,
+    .contact-list div {
+      grid-template-columns: 1fr;
+      gap: 2px;
+    }
+  }
+</style>

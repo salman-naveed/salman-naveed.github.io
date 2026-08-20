@@ -1,0 +1,70 @@
+---
+layout: ../../layouts/ProjectLayout.astro
+
+# REQUIRED
+title: "Project title"
+description: "One or two sentences describing the project."
+
+# OPTIONAL METADATA
+year: "2026"
+status: "Complete"
+role: "Personal project"
+tags:
+  - Embedded Systems
+  - PCB Design
+
+# Image path inside /public
+hero: "/images/my-project/hero.jpg"
+
+# Homepage visibility
+featured: true
+
+# Lower number = appears earlier
+order: 10
+
+# Leave blank to hide
+github: "https://github.com/..."
+external: ""
+---
+
+## Background
+
+Why did you build this?
+
+## Requirements
+
+What did the system need to do?
+
+## Architecture
+
+How is the system organized?
+
+![Architecture diagram](/images/my-project/architecture.png)
+
+## Hardware
+
+Explain the electronics.
+
+## Software
+
+Explain the firmware/software.
+
+## Engineering decisions
+
+Discuss alternatives and tradeoffs.
+
+## Testing
+
+How was the system validated?
+
+## Result
+
+What was achieved?
+
+## Lessons learned
+
+What did the project teach you?
+
+## Future work
+
+What would you change or add next?

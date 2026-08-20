@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { site } from "../config/site";
+---
+
+<BaseLayout title={`About — ${site.name}`} description={site.about.lead}>
+  <section class="page">
+    <div class="container">
+      <div class="eyebrow">Profile</div>
+      <h1>{site.about.heading}</h1>
+
+      <div class="reading-width copy">
+        <p class="lead">{site.about.lead}</p>
+
+        {site.about.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+
+        {site.about.resumeUrl && (
+          <p>
+            <a class="text-link" href={site.about.resumeUrl}>View résumé →</a>
+          </p>
+        )}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page {
+    padding: 86px 0 110px;
+  }
+
+  .page h1 {
+    font-size: clamp(2.7rem, 7vw, 5rem);
+  }
+
+  .copy {
+    margin-top: 42px;
+  }
+
+  .copy > p:not(.lead) {
+    color: var(--muted);
+  }
+</style>
