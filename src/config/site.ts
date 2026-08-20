@@ -2,15 +2,15 @@ export const site = {
   // -------------------------------------------------------------------------
   // Identity
   // -------------------------------------------------------------------------
-  name: "Your Name",
-  shortName: "YN",
-  role: "Embedded Systems Engineer",
+  name: "Salman Naveed",
+  shortName: "SN",
+  role: "Electrical Engineer / Designer / Maker",
   descriptor: "Electronics · Embedded Systems · Robotics",
   tagline: "I design and build reliable hardware and embedded systems.",
 
   // Used in browser metadata / SEO.
-  siteUrl: "https://example.com",
-  defaultTitle: "Your Name — Embedded Systems Engineer",
+  siteUrl: "https://salman-naveed.netlify.app",
+  defaultTitle: "Salman Naveed — Embedded Systems Engineer",
   defaultDescription:
     "Engineering portfolio covering embedded systems, electronics, robotics, PCB design and technical projects.",
 
@@ -74,10 +74,10 @@ export const site = {
   // Leave a URL blank ("") to hide that link automatically.
   // -------------------------------------------------------------------------
   contact: {
-    email: "hello@example.com",
+    email: "salman.navid@hotmail.com",
     location: "Germany",
-    github: "https://github.com/yourusername",
-    linkedin: "https://www.linkedin.com/in/yourusername/",
+    github: "https://github.com/salman-naveed",
+    linkedin: "https://www.linkedin.com/in/salmannaveed/",
     resume: "/resume.pdf"
   },
 
