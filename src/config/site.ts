@@ -84,6 +84,7 @@ export const site = {
     location: "Germany",
     github: "https://github.com/salman-naveed",
     linkedin: "https://www.linkedin.com/in/salmannaveed/",
+    youtube: "https://www.youtube.com/@navlabs_inc",
     resume: "/resume.pdf"
   },
 

@@ -9,7 +9,7 @@ tags:
   - Robotics
   - Embedded Systems
   - ROS
-hero: "/images/rover-xr4.png"
+hero: "/images/rover-xr4-hero.png"
 featured: true
 order: 1
 github: ""
