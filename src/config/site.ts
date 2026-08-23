@@ -74,17 +74,17 @@ export const site = {
     ],
       photos: [
     {
-      src: "/images/public/sn.jpg",
+      src: "/public/images/sn.jpg",
       alt: "Salman working on an engineering project",
       caption: ""
     },
     {
-      src: "/images/public/sn1.jpg",
+      src: "/public/images/sn1.jpg",
       alt: "Salman in the workshop",
       caption: ""
     },
     {
-      src: "/images/public/sn2.jpg",
+      src: "/public/images/sn2.jpg",
       alt: "Salman with a robotics project",
       caption: ""
     }
