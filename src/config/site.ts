@@ -72,6 +72,23 @@ export const site = {
       "My work sits between hardware and software: schematic design, PCB development, firmware, interfaces, debugging, validation and system integration.",
       "I like projects where the engineering decisions are visible — where constraints, testing and iteration matter as much as the final photograph."
     ],
+      photos: [
+    {
+      src: "/images/public/sn.jpg",
+      alt: "Salman working on an engineering project",
+      caption: ""
+    },
+    {
+      src: "/images/public/sn1.jpg",
+      alt: "Salman in the workshop",
+      caption: ""
+    },
+    {
+      src: "/images/public/sn2.jpg",
+      alt: "Salman with a robotics project",
+      caption: ""
+    }
+  ],
     resumeUrl: "/resume.pdf"
   },
 
