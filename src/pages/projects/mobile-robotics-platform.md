@@ -1,15 +1,15 @@
 ---
 layout: ../../layouts/ProjectLayout.astro
-title: "Mobile Robotics Platform"
+title: "XR-4: Mobile Robotics Platform"
 description: "A modular four-wheel differential-drive rover developed as a test bed for mobile robotics, ROS and autonomy R&D."
-year: "2026"
+year: "2024 - 2026"
 status: "In development"
 role: "Personal project"
 tags:
   - Robotics
   - Embedded Systems
   - ROS
-hero: "/images/project-placeholder.svg"
+hero: "/images/rover-xr4.png"
 featured: true
 order: 1
 github: ""

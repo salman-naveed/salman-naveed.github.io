@@ -4,15 +4,15 @@ export const site = {
   // -------------------------------------------------------------------------
   name: "Salman Naveed",
   shortName: "SN",
-  role: "Electrical Engineer / Designer / Maker",
-  descriptor: "Electronics · Embedded Systems · Robotics",
+  role: "Electrical Engineer | Designer | Maker",
+  descriptor: "Embedded Systems · IoT & Connected Devices · Robotics",
   tagline: "I design and build reliable hardware and embedded systems.",
 
   // Used in browser metadata / SEO.
   siteUrl: "https://salman-naveed.netlify.app",
-  defaultTitle: "Salman Naveed — Embedded Systems Engineer",
+  defaultTitle: "Salman Naveed — Electrical Engineer | Designer | Maker",
   defaultDescription:
-    "Engineering portfolio covering embedded systems, electronics, robotics, PCB design and technical projects.",
+    "Engineering portfolio covering embedded systems, electronics, IoT, robotics, PCB design and other technical projects.",
 
   // -------------------------------------------------------------------------
   // Homepage
@@ -23,7 +23,7 @@ export const site = {
       "I work across electronics, embedded firmware and system integration, turning requirements into tested physical systems.",
     projectsHeading: "Selected Projects",
     projectsIntro:
-      "A selection of engineering projects, documented with the decisions, tradeoffs and lessons behind the final result.",
+      "A selection of my engineering projects, documented with the decisions, tradeoffs and lessons behind the final result.",
     writingHeading: "Writing",
     writingIntro:
       "Technical notes, build logs and practical engineering write-ups.",
@@ -41,6 +41,12 @@ export const site = {
       heading: "Projects",
       intro:
         "Engineering projects documented around the problem, architecture, implementation, tradeoffs, testing and lessons learned."
+    },
+    services: {
+      eyebrow: "Services",
+      heading: "Engineering Services",
+      intro:
+        "I can provide engineering services for embedded systems, analog & digital electronics design, schematic and PCB development, CAD and robotics projects."
     },
     writing: {
       eyebrow: "Notes & Guides",
@@ -61,7 +67,7 @@ export const site = {
   about: {
     heading: "About",
     lead:
-      "I am an engineer interested in embedded systems, electronics, industrial IoT and robotics.",
+      "My name is Salman Naveed. My educational background and career focus lies in electrical engineering, with a specialization in embedded systems, IoT and connected devices and robotics. I have worked on various projects in these domains, in both professional and academic settings. I am passionate about designing and building reliable hardware and embedded systems, and I enjoy sharing my knowledge and experiences through writing and documentation.",
     paragraphs: [
       "My work sits between hardware and software: schematic design, PCB development, firmware, interfaces, debugging, validation and system integration.",
       "I like projects where the engineering decisions are visible — where constraints, testing and iteration matter as much as the final photograph."
@@ -88,6 +94,7 @@ export const site = {
     { label: "Home", href: "/" },
     { label: "Projects", href: "/projects/" },
     { label: "Writing", href: "/writing/" },
+    { label: "Services", href: "/services/" },
     { label: "About", href: "/about/" },
     { label: "Contact", href: "/contact/" }
   ],
