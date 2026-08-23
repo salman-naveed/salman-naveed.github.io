@@ -1,14 +1,15 @@
 ---
 layout: ../../layouts/ProjectLayout.astro
-title: "Embedded Hardware Platform"
-description: "Example case study for a custom embedded electronics or industrial IoT hardware project."
-year: "2026"
-status: "Example"
-role: "Hardware & firmware"
+title: "DC Bench Power Supply"
+description: ""
+year: "2024-2025"
+status: "Completed"
+role: "Hardware, system integration, CAD & firmware"
 tags:
-  - PCB Design
-  - Embedded
-  - IIoT
+  - CAD
+  - Voltage & current measurement
+  - 3D Printing
+  - System Integration
 hero: "/images/project-placeholder.svg"
 featured: true
 order: 2

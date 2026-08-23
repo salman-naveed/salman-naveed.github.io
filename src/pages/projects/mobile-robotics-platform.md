@@ -19,7 +19,9 @@ external: ""
 ## Background
 
 Use this section to explain why the project exists. Give the reader enough
-context to understand the problem before describing your solution.
+context to understand the problem before describing your solution.#
+
+![Logo](/images/rover-xr4-1.png)
 
 ## Design goals
 
@@ -39,6 +41,8 @@ Explain the system at a high level before diving into individual components.
 
 Document the chassis, drivetrain, manufacturing decisions and major mechanical
 tradeoffs.
+
+![CAD Render](/images/rover-xr4-4.png)
 
 ## Electronics
 
