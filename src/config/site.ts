@@ -46,7 +46,38 @@ export const site = {
       eyebrow: "Services",
       heading: "Engineering Services",
       intro:
-        "I can provide engineering services for embedded systems, analog & digital electronics design, schematic and PCB development, CAD and robotics projects."
+        "I can provide engineering services for embedded systems, analog & digital electronics design, schematic and PCB development, CAD and robotics projects.",
+      // Each item is one row on the Services page. Add, remove or reorder freely.
+      items: [
+        {
+          title: "Embedded Systems & Firmware",
+          description:
+            "Microcontroller firmware, peripheral drivers, communication interfaces and connected IoT devices — from bring-up to field-ready code."
+        },
+        {
+          title: "Analog & Digital Electronics",
+          description:
+            "Circuit design and analysis for power, sensing, signal conditioning and digital logic, with an emphasis on reliability and testability."
+        },
+        {
+          title: "Schematic & PCB Development",
+          description:
+            "Schematic capture, component selection, PCB layout and preparation of manufacturing files, followed by board bring-up and debugging."
+        },
+        {
+          title: "CAD & Mechanical Integration",
+          description:
+            "Enclosures, mounts and mechanical assemblies designed around the electronics so the whole system fits together."
+        },
+        {
+          title: "Robotics",
+          description:
+            "Mobile robot platforms, motor control, sensor integration and system-level testing."
+        }
+      ],
+      ctaHeading: "Have a project in mind?",
+      ctaText:
+        "Send a short description of what you are building, your constraints and your timeline, and I will get back to you."
     },
     writing: {
       eyebrow: "Notes & Guides",
@@ -58,6 +89,12 @@ export const site = {
       eyebrow: "Contact",
       heading: "Get in touch",
       intro: "The simplest way to reach me is by email."
+    },
+    resume: {
+      eyebrow: "CV",
+      heading: "Résumé",
+      intro:
+        "A summary of my education, experience and skills. Preview it below or download the PDF."
     }
   },
 
@@ -94,7 +131,7 @@ export const site = {
       caption: ""
     }
   ],
-    resumeUrl: "/resume.pdf"
+    resumeUrl: "/resume/"
   },
 
   // -------------------------------------------------------------------------
@@ -107,6 +144,7 @@ export const site = {
     github: "https://github.com/salman-naveed",
     linkedin: "https://www.linkedin.com/in/salmannaveed/",
     youtube: "https://www.youtube.com/@navlabs_inc",
+    // Path to the PDF in /public. The /resume/ page embeds this file.
     resume: "/resume.pdf"
   },
 

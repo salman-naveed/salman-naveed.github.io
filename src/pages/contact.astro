@@ -6,7 +6,7 @@ const links = [
   { label: "Email", value: site.contact.email, href: `mailto:${site.contact.email}` },
   { label: "GitHub", value: "GitHub profile", href: site.contact.github },
   { label: "LinkedIn", value: "LinkedIn profile", href: site.contact.linkedin },
-  { label: "Résumé", value: "Download / view", href: site.contact.resume },
+  { label: "Résumé", value: "View / download", href: site.contact.resume && "/resume/" },
   { label: "YouTube", value: "YouTube channel", href:site.contact.youtube }
 ].filter((item) => item.href);
 ---

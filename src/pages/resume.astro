@@ -1,0 +1,67 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { site } from "../config/site";
+
+const pdf = site.contact.resume;
+---
+
+<BaseLayout title={`Résumé — ${site.name}`} description={site.pages.resume.intro}>
+  <section class="page">
+    <div class="container">
+      <div class="eyebrow">{site.pages.resume.eyebrow}</div>
+      <h1>{site.pages.resume.heading}</h1>
+      <p class="lead">{site.pages.resume.intro}</p>
+
+      <div class="button-row">
+        <a class="button" href={pdf} download>Download PDF</a>
+        <a class="button" href={pdf} target="_blank" rel="noopener">Open in new tab</a>
+      </div>
+
+      <div class="viewer">
+        <object data={`${pdf}#view=FitH`} type="application/pdf" aria-label={`${site.name} résumé`}>
+          <div class="viewer__fallback">
+            <p>Your browser can't display the PDF inline.</p>
+            <a class="text-link" href={pdf} target="_blank" rel="noopener">
+              Open the résumé →
+            </a>
+          </div>
+        </object>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page {
+    padding: 86px 0 110px;
+  }
+
+  .page h1 {
+    font-size: clamp(2.7rem, 7vw, 5rem);
+    margin-bottom: 26px;
+  }
+
+  .viewer {
+    margin-top: 42px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+  }
+
+  .viewer object {
+    display: block;
+    width: 100%;
+    height: min(1100px, 85vh);
+  }
+
+  .viewer__fallback {
+    padding: 48px 24px;
+    text-align: center;
+    color: var(--muted);
+  }
+
+  @media (max-width: 720px) {
+    .viewer object {
+      height: 75vh;
+    }
+  }
+</style>
