@@ -4,15 +4,15 @@ export const site = {
   // -------------------------------------------------------------------------
   name: "Salman Naveed",
   shortName: "SN",
-  role: "Electrical Engineer | Designer | Maker",
-  descriptor: "Embedded Systems · IoT & Connected Devices · Robotics",
-  tagline: "I design and build reliable hardware and embedded systems.",
+  role: "Electrical & Embedded Systems Engineer",
+  descriptor: "Embedded Hardware & Firmware · Industrial IoT · Mixed-Signal & RF Design · Robotics",
+  tagline: "I engineer embedded hardware and firmware, from requirements to validated, production-ready products.",
 
   // Used in browser metadata / SEO.
   siteUrl: "https://salman-naveed.netlify.app",
-  defaultTitle: "Salman Naveed — Electrical Engineer | Designer | Maker",
+  defaultTitle: "Salman Naveed — Electrical & Embedded Systems Engineer",
   defaultDescription:
-    "Engineering portfolio covering embedded systems, electronics, IoT, robotics, PCB design and other technical projects.",
+    "Portfolio of Salman Naveed, an electrical and embedded systems engineer working on industrial IoT hardware, multi-layer PCB design, C/C++ firmware, mixed-signal and RF circuits, and robotics.",
 
   // -------------------------------------------------------------------------
   // Homepage
@@ -20,16 +20,16 @@ export const site = {
   home: {
     eyebrow: "ENGINEERING PORTFOLIO",
     intro:
-      "I work across electronics, embedded firmware and system integration, turning requirements into tested physical systems.",
+      "I'm an electrical engineer in Stuttgart, Germany. I design industrial IoT devices, mixed-signal and RF circuits, and robotic systems, and I take them from schematic and multi-layer PCB layout through C/C++ firmware to lab validation.",
     projectsHeading: "Selected Projects",
     projectsIntro:
-      "A selection of my engineering projects, documented with the decisions, tradeoffs and lessons behind the final result.",
+      "Industrial IoT hardware, precision analog and RF design, and autonomous robotics. Each project is documented with the decisions, tradeoffs and lessons behind the final result.",
     writingHeading: "Writing",
     writingIntro:
-      "Technical notes, build logs and practical engineering write-ups.",
+      "Technical notes, build logs and practical write-ups from hardware, firmware and lab work.",
     contactHeading: "Get in touch",
     contactText:
-      "For engineering roles, technical collaboration or questions about my work, feel free to contact me."
+      "For engineering roles, technical services, collaboration or questions about my work, feel free to contact me."
   },
 
   // -------------------------------------------------------------------------
@@ -62,7 +62,7 @@ export const site = {
         {
           title: "Schematic & PCB Development",
           description:
-            "Schematic capture, component selection, PCB layout and preparation of manufacturing files, followed by board bring-up and debugging."
+            "Schematic capture, component selection, PCB layout and preparation of manufacturing files, followed by board bring-up and debugging for digital, RF and mixed-signal designs."
         },
         {
           title: "CAD & Mechanical Integration",
@@ -104,10 +104,12 @@ export const site = {
   about: {
     heading: "About",
     lead:
-      "My name is Salman Naveed. My educational background and career focus lies in electrical engineering, with a specialization in embedded systems, IoT and connected devices and robotics. I have worked on various projects in these domains, in both professional and academic settings. I am passionate about designing and building reliable hardware and embedded systems, and I enjoy sharing my knowledge and experiences through writing and documentation.",
+      "I'm Salman Naveed, an electrical engineer based in Stuttgart, Germany, working across embedded hardware and firmware. I design industrial IoT devices, mixed-signal and RF circuits, and robotic systems. I also work on precision sensing systems and instrument design for optics research projects in the area of Space-Division Multiplexing. I have experience taking them from requirements and component selection through schematic design, multi-layer PCB layout, firmware and lab validation.",
     paragraphs: [
-      "My work sits between hardware and software: schematic design, PCB development, firmware, interfaces, debugging, validation and system integration.",
-      "I like projects where the engineering decisions are visible — where constraints, testing and iteration matter as much as the final photograph."
+      "Since 2023 I have worked as a working student in embedded systems at GPS GmbH, where I lead hardware development for three industrial IoT product lines. I design 4- to 6-layer boards in Altium Designer for industrial environments, with isolated 24 V I/O, filtered analog sensor inputs, protection circuitry and EMC-aware layout. Each board is optimized for manufacturing and in-house low-volume production. On the firmware side I write C/C++ for ESP32 and STM32 under FreeRTOS. That work includes a safety-critical SLIP-based UART protocol for a motorized lifting system, a thread-safe hardware abstraction layer for persistent storage on the STM32H7, and edge software for condition monitoring, predictive maintenance and digital twins.",
+      "I am completing an MSc in Electrical Engineering at the University of Stuttgart, after a BE from NUST. My master's thesis is a high-speed, closed-loop polarization tracking system for characterizing few-mode and multicore optical fibers. It combines a precision analog signal chain driving a high-voltage piezo actuator, mixed-signal STM32 PCBs, real-time control firmware and a PC-based GUI. In earlier research I designed, fabricated and characterized 2.4 GHz planar microstrip band-pass filters, using Keysight ADS for the design and a VNA for the measurements.",
+      "Outside of work I'm building XR-4, a 4WD autonomous rover test platform where I own every layer of the system. That covers the Fusion 360 frame and suspension, custom KiCad PCBs, ESP-IDF/FreeRTOS firmware for motor control and telemetry, and an x86 ROS 2 mission computer with LIDAR and cameras.",
+      "Before moving into embedded engineering full-time, I spent a year and a half as a product manager for digital payments at United Bank Limited. There I ran production systems handling more than 250,000 transactions a day. That experience still shapes how I work: clear requirements, structured testing and documentation, and end-to-end ownership."
     ],
       photos: [
     {
